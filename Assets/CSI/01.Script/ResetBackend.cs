@@ -15,6 +15,14 @@ public class ResetBackend : MonoBehaviour
         }
         else
         {
+            /*초기화 실패 : StatusCode : 0
+            ErrorCode : ConnectionError
+            Message : Cannot connect to destination host
+            */
+            if (bro.StatusCode == 0)
+            {
+                Debug.LogError("인터냇을 확인 해주세요! \n Cannot connect to destination host");
+            }
             Debug.LogError("초기화 실패 : " + bro); // 실패일 경우 statusCode 400대 에러 발생
         }
     }

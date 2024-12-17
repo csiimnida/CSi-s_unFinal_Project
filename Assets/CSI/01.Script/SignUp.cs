@@ -38,11 +38,12 @@ public class SignUp : MonoBehaviour
             ErrorCode : DuplicatedParameterException
             Message : Duplicated customId, 중복된 customId 입니다
             */
+            Debug.LogError("회원가입에 실패했습니다. : " + bro);
             if (bro.ErrorCode == "DuplicatedParameterException")
             {
-                Debug.LogError("회원가입에 실패했습니다.\n 이미 존재하는 ID 입니다.");
+                Debug.LogWarning("이미 존재하는 ID 입니다.");
+                return;
             }
-            Debug.LogError("회원가입에 실패했습니다. : " + bro);
         }
     }
 }

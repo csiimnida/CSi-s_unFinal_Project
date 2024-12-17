@@ -47,15 +47,15 @@ public class Login : MonoBehaviour
 
     public void ChengeNickname(string Nicname)
     {
-        SendQueue.Enqueue(Backend.BMember.CreateNickname, Nicname, (callback) =>
+        Backend.BMember.CreateNickname(Nicname, (callback) =>
         {
             if (callback.IsSuccess())
             {
-                Debug.Log("변경 성공!");
+                Debug.Log("닉네임 변경 성공!");
             }
             else
             {
-                Debug.LogError("변경 실패");
+                Debug.LogError("닉네임 변경 실패");
                 switch (callback.StatusCode)
                 {
                     case 400:
@@ -67,5 +67,6 @@ public class Login : MonoBehaviour
                 }
             }
         });
+
     }
 }
