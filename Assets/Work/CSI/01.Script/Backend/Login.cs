@@ -4,16 +4,17 @@ using BackEnd;
 using UnityEditor.PackageManager;
 using ErrorCode = BackEnd.Tcp.ErrorCode;
 
-public class Login : MonoBehaviour
+public class Login : MonoSingleton<Login>
 {
-    public void CustomLogin(string id, string pw,string nickname = "Test")
+    public void CustomLogin(string nickname = "")
     {
     
-        var bro = Backend.BMember.CustomLogin(id, pw);
+        var bro = Backend.BMember.CustomLogin(GetUniqueComputerId(), "1234");
     
         if (bro.IsSuccess())
         {
-            ChengeNickname(nickname);
+            if(nickname != "")
+                ChengeNickname(nickname);
             Debug.Log("로그인이 성공했습니다. : " + bro);
         }
         else
@@ -21,7 +22,7 @@ public class Login : MonoBehaviour
             if (bro.ErrorCode == "BadUnauthorizedException")
             {
                 Debug.LogError("로그인이 실패했습니다. \n 계정이 없습니다. 계정을 생성합니다.");
-                SignUp.Instance.CustomSignUp(id, pw);
+                SignUp.Instance.CustomSignUp(GetUniqueComputerId(), "1234");
                 return;
             }
             Debug.LogError("로그인이 실패했습니다. : " + bro);
@@ -34,7 +35,7 @@ public class Login : MonoBehaviour
     public void Start()
     {
         string uniqueId = GetUniqueComputerId();
-        Debug.Log("Unique ID: " + uniqueId);
+        Debug.Log("UUID: " + uniqueId);
     }
 
     public string GetUniqueComputerId()

@@ -4,7 +4,7 @@ using System.Text;
 using BackEnd;
 using UnityEngine;
 
-public class BackenRank : MonoBehaviour
+public class BackenRank : MonoSingleton<BackenRank>
 {
     public void RankInsert(float score)
     {
@@ -61,19 +61,20 @@ public class BackenRank : MonoBehaviour
         }
     
         Debug.Log("랭킹 삽입에 성공했습니다. : " + rankBro);
+        RankGet();
     }
     
     public void RankGet()
     {
         string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf";
-        var bro = Backend.URank.User.GetRankList(rankUUID);
+        BackendReturnObject bro = Backend.URank.User.GetRankList(rankUUID);
 
         if (bro.IsSuccess() == false)
         {
             Debug.LogError("랭킹 조회중 오류가 발생했습니다. : " + bro);
             return;
         }
-
+        SetRanksUI.Instance.Set(bro);
         Debug.Log("랭킹 조회에 성공했습니다. : " + bro);
 
         Debug.Log("총 랭킹 등록 유저 수 : " + bro.GetFlattenJSON()["totalCount"].ToString());

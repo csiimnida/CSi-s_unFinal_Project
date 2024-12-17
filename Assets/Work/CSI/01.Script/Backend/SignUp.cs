@@ -4,22 +4,8 @@ using System.Collections.Generic;
 using BackEnd;
 using UnityEngine;
 
-public class SignUp : MonoBehaviour
+public class SignUp : MonoSingleton<SignUp>
 {
-    public static SignUp Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void CustomSignUp(string id, string pw)
     {
@@ -30,6 +16,7 @@ public class SignUp : MonoBehaviour
         if (bro.IsSuccess())
         {
             Debug.Log("회원가입에 성공했습니다. : " + bro);
+            Login.Instance.CustomLogin();
         }
         else
         {
