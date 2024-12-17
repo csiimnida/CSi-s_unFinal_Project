@@ -20,12 +20,12 @@ public class BackendTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            login.CustomLogin("123","123");
+            login.CustomLogin(login.GetUniqueComputerId(),"123");
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            signUp.CustomSignUp("123","123");
+            signUp.CustomSignUp(login.GetUniqueComputerId(),"123");
         }
 
         if (Input.GetKeyDown(KeyCode.R))

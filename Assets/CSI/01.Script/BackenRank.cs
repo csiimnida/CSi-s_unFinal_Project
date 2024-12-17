@@ -8,14 +8,12 @@ public class BackenRank : MonoBehaviour
 {
     public void RankInsert(float score)
     {
-        // [변경 필요] '복사한 UUID 값'을 '뒤끝 콘솔 > 랭킹 관리'에서 생성한 랭킹의 UUID값으로 변경해주세요.  
-        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf"; // 예시 : "4088f640-693e-11ed-ad29-ad8f0c3d4c70"
+        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf"; 
     
         string tableName = "Rank";
         string rowInDate = string.Empty;
     
-        // 랭킹을 삽입하기 위해서는 게임 데이터에서 사용하는 데이터의 inDate값이 필요합니다.  
-        // 따라서 데이터를 불러온 후, 해당 데이터의 inDate값을 추출하는 작업을 해야합니다.  
+
         Debug.Log("데이터 조회를 시도합니다.");
         var bro = Backend.GameData.GetMyData(tableName, new Where());
     
@@ -47,7 +45,7 @@ public class BackenRank : MonoBehaviour
             rowInDate = bro2.GetInDate();
         }
     
-        Debug.Log("내 게임 정보의 rowInDate : " + rowInDate); // 추출된 rowIndate의 값은 다음과 같습니다.  
+        Debug.Log("내 게임 정보의 rowInDate : " + rowInDate); 
     
         Param param = new Param();
         param.Add("Time", score);
@@ -67,7 +65,7 @@ public class BackenRank : MonoBehaviour
     
     public void RankGet()
     {
-        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf"; // 예시 : "4088f640-693e-11ed-ad29-ad8f0c3d4c70"
+        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf";
         var bro = Backend.URank.User.GetRankList(rankUUID);
 
         if (bro.IsSuccess() == false)
