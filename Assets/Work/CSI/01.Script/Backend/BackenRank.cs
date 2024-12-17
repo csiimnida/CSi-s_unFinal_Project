@@ -85,7 +85,7 @@ public class BackenRank : MonoSingleton<BackenRank>
             StringBuilder info = new StringBuilder();
 
             info.AppendLine("순위 : " + jsonData["rank"].ToString());
-            info.AppendLine("닉네임 : " + jsonData["nickname"].ToString());
+            //info.AppendLine("닉네임 : " + jsonData["nickname"].ToString());
             info.AppendLine("시간 : " + jsonData["score"].ToString());
             info.AppendLine("gamerInDate : " + jsonData["gamerInDate"].ToString());
             info.AppendLine("정렬번호 : " + jsonData["index"].ToString());
