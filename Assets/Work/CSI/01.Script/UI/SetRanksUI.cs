@@ -1,8 +1,5 @@
-
-using System;
 using BackEnd;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class SetRanksUI : MonoSingleton<SetRanksUI>
 {

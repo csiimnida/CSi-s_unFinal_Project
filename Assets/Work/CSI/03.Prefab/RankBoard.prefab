@@ -26,7 +26,7 @@ RectTransform:
   m_GameObject: {fileID: 10481035850792344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4527411016277334611}
@@ -79,7 +79,7 @@ RectTransform:
   m_GameObject: {fileID: 301106523546548151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4527411016277334611}
@@ -213,14 +213,14 @@ RectTransform:
   m_GameObject: {fileID: 4805661379108643208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4527411016277334611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 30, y: 0}
   m_SizeDelta: {x: 66.12, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &7471144736666853905
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1.
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2f9fefede3e39c4db67991b9767f214, type: 2}
   m_sharedMaterial: {fileID: -3997710183784263601, guid: c2f9fefede3e39c4db67991b9767f214, type: 2}
@@ -347,15 +347,15 @@ RectTransform:
   m_GameObject: {fileID: 6047626789475893955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4527411016277334611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -44.4, y: 0}
-  m_SizeDelta: {x: 264.1, y: -20}
+  m_AnchoredPosition: {x: -82.2, y: 0}
+  m_SizeDelta: {x: 298.3, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8366622293449522239
 CanvasRenderer:
