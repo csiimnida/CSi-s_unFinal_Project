@@ -63,6 +63,7 @@ public class BackenRank : MonoSingleton<BackenRank>
     
     public void RankGet()
     {
+        GetMyRanking();
         BackendReturnObject bro = Backend.URank.User.GetRankList(rankUUID);
 
         if (bro.IsSuccess() == false)

@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class RealyRankUpload : MonoBehaviour
+public class RealyRankUpload : MonoSingleton<RealyRankUpload>
 {
     [SerializeField] private TextMeshProUGUI _NowTimeText;
     [SerializeField] private TextMeshProUGUI _RankTimeText;

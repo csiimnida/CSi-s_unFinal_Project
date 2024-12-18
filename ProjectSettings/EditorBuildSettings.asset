@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Work/CSI/00.Scene/CSIStartScreen.unity
+    guid: ead28a0c49143984d83f3fdf8450605a
   - enabled: 1
     path: Assets/Work/CSI/00.Scene/CSiMain.unity
     guid: 4193f9b9104015545b1248e205b7504b

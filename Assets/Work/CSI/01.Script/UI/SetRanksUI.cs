@@ -8,7 +8,7 @@ public class SetRanksUI : MonoSingleton<SetRanksUI>
     [SerializeField] private Transform Panal;
     [SerializeField] private PanalData MyRank;
 
-
+    
     public void Set(BackendReturnObject bro)
     {
         for (int i = 0; i < Panal.childCount; i++)
@@ -32,7 +32,8 @@ public class SetRanksUI : MonoSingleton<SetRanksUI>
                 name = "NullError";
 
             }
-            string time = jsonData["score"].ToString();
+
+            float time = float.Parse(jsonData["score"].ToString());
 
             Instantiate(Prefab, Panal).GetComponent<PanalData>().SetData(no, name, time);
             

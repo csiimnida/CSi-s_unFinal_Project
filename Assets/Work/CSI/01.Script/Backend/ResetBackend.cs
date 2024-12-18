@@ -10,6 +10,11 @@ public class ResetBackend : MonoBehaviour
         ResetBackendSystem();
     }
 
+    private void Start()
+    {
+        BackenRank.Instance.RankGet();
+    }
+
     public bool ResetBackendSystem()
     {
         var bro = Backend.Initialize(); // 뒤끝 초기화
