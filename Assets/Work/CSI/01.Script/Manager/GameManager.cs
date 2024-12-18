@@ -4,5 +4,8 @@ using UnityEngine;
 
 public partial class GameManager : MonoSingleton<GameManager>
 {
-    
+    public void SuccessGame()
+    {
+        Debug.Log("SuccessGame");
+    }
 }
