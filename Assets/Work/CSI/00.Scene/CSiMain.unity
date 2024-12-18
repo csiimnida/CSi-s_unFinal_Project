@@ -399,6 +399,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rnak
       objectReference: {fileID: 0}
+    - target: {fileID: 3554015052953528209, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554015052953528209, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554015052953528209, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554015052953528209, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3667231739403578152, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -485,6 +501,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325637399863367539, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150730517280619249, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150730517280619249, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716229135076850699, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716229135076850699, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7896867952815296169, guid: a2592a0e10f37a14b91621d84c96d4e8, type: 3}
@@ -1368,8 +1400,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 58c96e7435b54ec4ba92dd85a3e4ebab, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
