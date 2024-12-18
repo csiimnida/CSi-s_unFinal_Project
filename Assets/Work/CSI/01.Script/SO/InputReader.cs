@@ -8,6 +8,7 @@ public class InputReader : ScriptableObject, IPlayerActions
     public Vector2 InputVector { get; private set; }
 
     public event Action<Vector2> OnMoveEvent;
+    public event Action<Vector2> OnMouseMoveEvent;
     public event Action OnJumpEvent;
     
     private MainControls _playerControls;
@@ -37,5 +38,13 @@ public class InputReader : ScriptableObject, IPlayerActions
     {
         if(!context.performed) return;
         OnJumpEvent?.Invoke();  
+        Debug.Log("Jump");
+    }
+
+    public void OnMouseMove(InputAction.CallbackContext context)
+    {
+        if(context.started) return;
+        Debug.Log(context.ReadValue<Vector2>());
+        OnMouseMoveEvent?.Invoke(context.ReadValue<Vector2>());
     }
 }
