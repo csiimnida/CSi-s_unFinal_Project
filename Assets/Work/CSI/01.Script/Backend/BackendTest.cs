@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BackendTest : MonoBehaviour
@@ -7,6 +8,9 @@ public class BackendTest : MonoBehaviour
     private BackenRank backenRank;
     private ResetBackend _resetBackend;
 
+    [SerializeField]
+    private RealyRankUpload _realyRankUpload;
+
     private void Awake()
     {
         login = GetComponentInChildren<Login>();
@@ -15,15 +19,19 @@ public class BackendTest : MonoBehaviour
         _resetBackend = GetComponentInChildren<ResetBackend>();
     }
 
+    private void Start()
+    {
+        if (true)//GameManager.Instance.UploadRank)
+        {
+            _realyRankUpload.gameObject.SetActive(true);
+            _realyRankUpload.SetTiem(Time.deltaTime);
+        }
+    }
+
     public void UploadRank()
     {
         if (true) // 나중에 수정
         {
-            if (!_resetBackend.ResetBackendSystem())
-            {
-                Debug.LogError("서버 초기화 실패");
-                return;
-            }
             login.CustomLogin();
         }
         backenRank.RankInsert(Time.deltaTime);

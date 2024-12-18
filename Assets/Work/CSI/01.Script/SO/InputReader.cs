@@ -44,7 +44,7 @@ public class InputReader : ScriptableObject, IPlayerActions
     public void OnMouseMove(InputAction.CallbackContext context)
     {
         if(context.started) return;
-        Debug.Log(context.ReadValue<Vector2>());
+        //Debug.Log(context.ReadValue<Vector2>());
         OnMouseMoveEvent?.Invoke(context.ReadValue<Vector2>());
     }
 }

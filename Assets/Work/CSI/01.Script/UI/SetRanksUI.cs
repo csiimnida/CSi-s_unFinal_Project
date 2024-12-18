@@ -48,6 +48,7 @@ public class SetRanksUI : MonoSingleton<SetRanksUI>
         }
         foreach (LitJson.JsonData jsonData in data.FlattenRows())
         {
+            GameManager.Instance.RankTime = float.Parse(jsonData["score"].ToString());
             MyRank.SetData(jsonData["rank"].ToString(),jsonData["nickname"].ToString(),jsonData["score"].ToString());
         }
     }

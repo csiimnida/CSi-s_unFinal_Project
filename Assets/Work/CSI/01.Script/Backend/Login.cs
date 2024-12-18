@@ -11,6 +11,7 @@ public class Login : MonoSingleton<Login>
     
         if (bro.IsSuccess())
         {
+            GameManager.Instance.PlayerName = Backend.UserNickName;
             if(nickname != "")
                 ChengeNickname(nickname);
             Debug.Log("로그인이 성공했습니다. : " + bro);
@@ -51,6 +52,7 @@ public class Login : MonoSingleton<Login>
             if (callback.IsSuccess())
             {
                 Debug.Log("닉네임 변경 성공!");
+                GameManager.Instance.PlayerName = Nicname;
             }
             else
             {
@@ -66,6 +68,5 @@ public class Login : MonoSingleton<Login>
                 }
             }
         });
-
     }
 }

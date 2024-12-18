@@ -1,9 +1,15 @@
+using System;
 using UnityEngine;
 using BackEnd;
 
 
 public class ResetBackend : MonoBehaviour
 {
+    private void Awake()
+    {
+        ResetBackendSystem();
+    }
+
     public bool ResetBackendSystem()
     {
         var bro = Backend.Initialize(); // 뒤끝 초기화
@@ -12,6 +18,7 @@ public class ResetBackend : MonoBehaviour
         if (bro.IsSuccess())
         {
             Debug.Log("초기화 성공 : " + bro); // 성공일 경우 statusCode 204 Success\
+            Login.Instance.CustomLogin();
             return true;
         }
         else
