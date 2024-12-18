@@ -9,10 +9,10 @@ public class PanalData : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Time;
 
-    public void SetData(string no, string name, string time)
+    public void SetData<T,Y,U>(T no, Y name, U time)
     {
-        No.SetText(no);
-        Name.SetText(name);
-        Time.SetText(time);
+        No.SetText(no.ToString());
+        Name.SetText(name.ToString());
+        Time.SetText(time.ToString());
     }
 }
