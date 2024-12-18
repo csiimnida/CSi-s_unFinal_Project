@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Work/CSI/00.Scene/CSiMain.unity
     guid: 4193f9b9104015545b1248e205b7504b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3c2cc70dd7f14ed488b6cabaf7ed27ff, type: 3}
