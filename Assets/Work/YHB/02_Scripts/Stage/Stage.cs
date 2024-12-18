@@ -1,7 +1,5 @@
 using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +18,6 @@ public class Stage : MonoBehaviour
         OnClearEvent += StageManager.Instance.StageClear;
         OnGameEndEvent += Restart;
         _restarters = transform.GetComponentsInChildren<IRestartable>();
-        Restart();
     }
 
     protected void OnDisable()
@@ -41,11 +38,30 @@ public class Stage : MonoBehaviour
 
     public void Restart()
     {
+        fadeImage.gameObject.SetActive(true);
         fadeImage.DOFade(1f, 0);
         fadeImage.DOFade(0f, fadeTime);
+        fadeImage.gameObject.SetActive(false);
         foreach (IRestartable item in _restarters)
         {
+            item.RestartEnd();
             item.RestartSet();
+        }
+    }
+
+    public void Disable()
+    {
+        foreach (IRestartable item in _restarters)
+        {
+            item.RestartEnd();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
         }
     }
 }

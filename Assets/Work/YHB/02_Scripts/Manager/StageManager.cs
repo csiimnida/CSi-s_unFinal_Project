@@ -74,12 +74,14 @@ public class StageManager : MonoSingleton<StageManager>
         }
 
         _curStageList[0].gameObject.SetActive(true);
+        _curStageList[0].Restart();
     }
 
     public void StageClear()
     {
         if (_gameClear) return;
 
+        _curStageList[CurStageIndex].Disable();
         _curStageList[CurStageIndex++].gameObject.SetActive(false);
 
         if (CurStageIndex >= difficulty[CurDifficultyIndex].stages.Count)
@@ -89,6 +91,7 @@ public class StageManager : MonoSingleton<StageManager>
         }
 
         _curStageList[CurStageIndex].gameObject.SetActive(true);
+        _curStageList[CurStageIndex].Restart();
     }
 
     public void NextDifficulty()
@@ -103,6 +106,7 @@ public class StageManager : MonoSingleton<StageManager>
 
         CurStageIndex = 0;
         _curStageList[0].gameObject.SetActive(true);
+        _curStageList[CurStageIndex].Restart();
     }
 
     public void GameClear()

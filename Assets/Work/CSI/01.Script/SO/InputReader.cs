@@ -6,12 +6,13 @@ using static MainControls;
 public class InputReader : ScriptableObject, IPlayerActions
 {
     public Vector2 InputVector { get; private set; }
+    public Vector2 MouseInputValue { get; private set; }
 
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnMouseMoveEvent;
     public event Action OnJumpEvent;
-    public event Action OnMouseClickEvent;
-    public event Action OnMouseClickCaneelEvent;
+    public event Action<Vector2> OnMouseClickEvent;
+    public event Action<Vector2> OnMouseClickCaneelEvent;
     public event Action<Vector2> OnMousePosEvent;
     
     private MainControls _playerControls;
@@ -53,12 +54,13 @@ public class InputReader : ScriptableObject, IPlayerActions
 
     public void OnMousePos(InputAction.CallbackContext context)
     {
-        if (context.started) OnMouseClickEvent?.Invoke();
-        else if (context.canceled) OnMouseClickCaneelEvent?.Invoke();
+        MouseInputValue = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+        OnMousePosEvent?.Invoke(MouseInputValue);
     }
 
     public void OnMouseLeftClick(InputAction.CallbackContext context)
     {
-        OnMousePosEvent?.Invoke(context.ReadValue<Vector2>());
+        if (context.started) OnMouseClickEvent?.Invoke(MouseInputValue);
+        else if (context.canceled) OnMouseClickCaneelEvent?.Invoke(MouseInputValue);
     }
 }
