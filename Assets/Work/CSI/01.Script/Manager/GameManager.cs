@@ -4,11 +4,24 @@ using UnityEngine;
 
 public partial class GameManager : MonoSingleton<GameManager>
 {
+    [Header("서버 데이터")] 
     public string PlayerName;
     public bool UploadRank;
-    public float RankTime;
+    
+    [Header("자신의 랭킹 정보")]
+    public int No;
+    public string Name;
+    public float Time;
+    
     public void SuccessGame()
     {
         Debug.Log("SuccessGame");
+    }
+
+    public void SetRank(string rank , string name, string time)
+    {
+        No = int.Parse(rank);
+        Name = name;
+        Time = float.Parse(time);
     }
 }

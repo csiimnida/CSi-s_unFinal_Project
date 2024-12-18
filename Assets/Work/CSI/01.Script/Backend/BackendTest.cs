@@ -19,21 +19,15 @@ public class BackendTest : MonoBehaviour
         _resetBackend = GetComponentInChildren<ResetBackend>();
     }
 
-    private void Start()
+    private void FinishGame(float Finishtime)
     {
-        if (true)//GameManager.Instance.UploadRank)
+        if (GameManager.Instance.UploadRank)
         {
+            BackenRank.Instance.GetMyRanking();
             _realyRankUpload.gameObject.SetActive(true);
-            _realyRankUpload.SetTiem(Time.deltaTime);
+            _realyRankUpload.SetTiem(Finishtime);
         }
     }
 
-    public void UploadRank()
-    {
-        if (true) // 나중에 수정
-        {
-            login.CustomLogin();
-        }
-        backenRank.RankInsert(Time.deltaTime);
-    }
+
 }

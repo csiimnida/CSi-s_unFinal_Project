@@ -58,12 +58,11 @@ public class BackenRank : MonoSingleton<BackenRank>
         }
     
         Debug.Log("랭킹 삽입에 성공했습니다. : " + rankBro);
-        RankGet();
+
     }
     
     public void RankGet()
     {
-        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf";
         BackendReturnObject bro = Backend.URank.User.GetRankList(rankUUID);
 
         if (bro.IsSuccess() == false)
@@ -88,6 +87,22 @@ public class BackenRank : MonoSingleton<BackenRank>
             info.AppendLine("정렬번호 : " + jsonData["index"].ToString());
             info.AppendLine();
             Debug.Log(info);
+        }
+    }
+    
+    
+    
+    public void GetMyRanking()
+    {
+        BackendReturnObject data = Backend.URank.User.GetMyRank(rankUUID);
+        if (!data.IsSuccess())
+        {
+            Debug.LogError("자신의 랭킹 불러오기 시패 : " + data);
+            return;
+        }
+        foreach (LitJson.JsonData jsonData in data.FlattenRows())
+        {
+            GameManager.Instance.SetRank(jsonData["rank"].ToString(),jsonData["nickname"].ToString(),jsonData["score"].ToString());
         }
     }
 }
