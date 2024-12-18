@@ -10,6 +10,9 @@ public class InputReader : ScriptableObject, IPlayerActions
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnMouseMoveEvent;
     public event Action OnJumpEvent;
+    public event Action OnMouseClickEvent;
+    public event Action OnMouseClickCaneelEvent;
+    public event Action<Vector2> OnMousePosEvent;
     
     private MainControls _playerControls;
     
@@ -46,5 +49,16 @@ public class InputReader : ScriptableObject, IPlayerActions
         if(context.started) return;
         //Debug.Log(context.ReadValue<Vector2>());
         OnMouseMoveEvent?.Invoke(context.ReadValue<Vector2>());
+    }
+
+    public void OnMousePos(InputAction.CallbackContext context)
+    {
+        if (context.started) OnMouseClickEvent?.Invoke();
+        else if (context.canceled) OnMouseClickCaneelEvent?.Invoke();
+    }
+
+    public void OnMouseLeftClick(InputAction.CallbackContext context)
+    {
+        OnMousePosEvent?.Invoke(context.ReadValue<Vector2>());
     }
 }
