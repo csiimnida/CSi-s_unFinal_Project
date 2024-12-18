@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Stage : MonoBehaviour
 {
-    [SerializeField] private bool isGameOverStage;
-
     public Action OnClearEvent { get; private set; }
     public Action OnGameEndEvent { get; private set; }
 
@@ -14,15 +12,15 @@ public class Stage : MonoBehaviour
 
     private void OnEnable()
     {
-        // OnClearEvent += GameManager.Instance.StageClear;
-        // OnGameEndEvent += GameManager.Instance.IsGame && isGameOverStage ? GameManager.Instance.GameOver : Restart;
+        OnClearEvent += StageManager.Instance.StageClear;
+        OnGameEndEvent += Restart;
         _restarters = transform.GetComponentsInChildren<IRestartable>();
     }
 
     private void OnDisable()
     {
-        // OnClearEvent -= GameManager.Instance.StageClear;
-        // OnGameEndEvent -= GameManager.Instance.IsGame && isGameOverStage ? GameManager.Instance.GameOver : Restart;
+        OnClearEvent -= StageManager.Instance.StageClear;
+        OnGameEndEvent -= Restart;
     }
 
     public void Clear()

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Library
 {
@@ -109,6 +111,14 @@ namespace Library
             => dict.Where(pair => EqualityComparer<V>.Default.Equals(pair.Value, findValue)).ToDictionary(pair => pair.Key, pair => pair.Value) ?? new Dictionary<K, V>();
 
         #endregion
+
+        public static T TryAddComponent<T>(this Transform trm) where T : Component
+            => trm.TryGetComponent(out T comp) ? comp : trm.AddComponent<T>();
+
+        public static T TryAddComponent<T, A>(this Transform trm)
+            where T : Component
+            where A : T
+            => trm.TryGetComponent(out T comp) ? comp : trm.AddComponent<A>();
     }
 
     #endregion
