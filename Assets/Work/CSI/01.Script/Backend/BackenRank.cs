@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class BackenRank : MonoSingleton<BackenRank>
 {
+    string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf"; 
+    string tableName = "Rank";
     public void RankInsert(float score)
     {
-        string rankUUID = "0193cfe2-1c02-7219-b050-22f02d8fe0bf"; 
-    
-        string tableName = "Rank";
         string rowInDate = string.Empty;
-    
-
         Debug.Log("데이터 조회를 시도합니다.");
         var bro = Backend.GameData.GetMyData(tableName, new Where());
     
