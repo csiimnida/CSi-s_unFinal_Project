@@ -44,7 +44,7 @@ public class StageManager : MonoSingleton<StageManager>
 
     private void Awake()
     {
-        if(difficulty == null) return;
+        if(difficulty is null) return;
         Initialize();
     }
 

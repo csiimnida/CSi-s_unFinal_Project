@@ -12,7 +12,7 @@ public class InputReader : ScriptableObject, IPlayerActions
     public event Action<Vector2> OnMouseMoveEvent;
     public event Action OnJumpEvent;
     public event Action<Vector2> OnMouseClickEvent;
-    public event Action<Vector2> OnMouseClickCaneelEvent;
+    public event Action<Vector2> OnMouseClickCancelEvent;
     public event Action<Vector2> OnMousePosEvent;
     
     private MainControls _playerControls;
@@ -61,6 +61,6 @@ public class InputReader : ScriptableObject, IPlayerActions
     public void OnMouseLeftClick(InputAction.CallbackContext context)
     {
         if (context.started) OnMouseClickEvent?.Invoke(MouseInputValue);
-        else if (context.canceled) OnMouseClickCaneelEvent?.Invoke(MouseInputValue);
+        else if (context.canceled) OnMouseClickCancelEvent?.Invoke(MouseInputValue);
     }
 }

@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 4416824589154838055}
   fadeTime: 0.5
+  cameraSize: 9
+  cursor: 0
 --- !u!1 &7674607900173137859
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +378,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -401,8 +403,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
-  speed: 11.5
-  JumpPower: 3.6
+  _animator: {fileID: 0}
+  speed: 10
+  JumpPower: 16
+  banjun: 0
 --- !u!4 &5959008602316310597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3550383350440662285, guid: a5ef08c729aaabb42a255c83f5312527, type: 3}
@@ -455,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 1893481389851203752, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818824792781788972, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9089597179743361524, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: m_Name
