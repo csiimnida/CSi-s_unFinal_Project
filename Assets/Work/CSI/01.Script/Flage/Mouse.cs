@@ -23,39 +23,39 @@ public class Mouse : MonoBehaviour,IRestartable
     }
 
     private void OnEnable()
-    {        
-        cooltimefree = false;
-        StartCoroutine(CoolTime());
+    {
+        RestartSet();
     }
 
     private void Update()
     {
-        if (StartTimer)
-        {
+        if (!StartTimer) return;
+        
             timer += Time.deltaTime;
             if (timer > TimerMax)
             {
                 StartTimer = false;
                 timer = 0;
-                if (Mousepos == Vector2.zero)
+                if (Mousepos.x < Mathf.Epsilon && Mousepos.y < Mathf.Epsilon)
                 {
                     Stop?.Invoke();
                     Debug.Log("Stop");
                 }
+                else
+                {
+                    Move?.Invoke();
+                    Debug.Log("Move");
+                }                    
+
                 
-            }
         }
     }
 
     private void HandleMouseMove(Vector2 obj)
     {
-        if(cooltimefree)
-        {
+        if(!cooltimefree) return;
             Mousepos = obj;
             StartTimer = true;
-            timer = 0;
-            Move?.Invoke();
-        }
     }
 
     IEnumerator CoolTime()
