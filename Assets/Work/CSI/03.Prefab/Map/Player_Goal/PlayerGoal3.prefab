@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 4020485478541148671}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,6 +406,7 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
+  GroundCheck: {fileID: 0}
 --- !u!4 &5959008602316310597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3550383350440662285, guid: a5ef08c729aaabb42a255c83f5312527, type: 3}

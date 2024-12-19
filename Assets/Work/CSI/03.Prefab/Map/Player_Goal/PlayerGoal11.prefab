@@ -579,6 +579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4426258071981871046, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6244346944561599514, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
       propertyPath: m_Size.x
       value: 32.4
@@ -2302,6 +2306,7 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 7929349229272450491}
   banjun: 0
+  GroundCheck: {fileID: 0}
 --- !u!4 &7655292513459475922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893481389851203752, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
