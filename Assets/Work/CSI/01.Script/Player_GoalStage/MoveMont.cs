@@ -12,14 +12,15 @@ public class MoveMont : MonoBehaviour ,IRestartable
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _Rigidbody2D;
     private Vector2 move;
-    [SerializeField] private float speed;
-    [SerializeField] private float JumpPower;
+    private float speed = 10;
+    private float JumpPower = 16;
     [SerializeField] private bool banjun;
     private Vector3 startPosition;
 
     private void Awake()
     {
         _Rigidbody2D = GetComponent<Rigidbody2D>();
+        _Rigidbody2D.gravityScale = 5;
         startPosition = transform.position;
         
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
