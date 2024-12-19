@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Stage : MonoBehaviour
 {
     [SerializeField] private Image fadeImage;
-    [SerializeField] private float fadeTime = 0.5f;
+    [SerializeField] private float fadeTime = 1;
 
     public Action OnClearEvent { get; private set; }
     public Action OnGameEndEvent { get; private set; }
@@ -38,21 +38,13 @@ public class Stage : MonoBehaviour
 
     public void Restart()
     {
-        fadeImage.gameObject.SetActive(true);
-        fadeImage.DOFade(1f, 0);
-        fadeImage.DOFade(0f, fadeTime);
-        fadeImage.gameObject.SetActive(false);
+        //Cursor.WarpCursorPosition();
+
+        fadeImage.transform.parent.gameObject.SetActive(true);
+        fadeImage.DOFade(1f, 0).OnComplete(() => fadeImage.DOFade(0f, fadeTime).OnComplete(() => fadeImage.transform.parent.gameObject.SetActive(false)));
         foreach (IRestartable item in _restarters)
         {
             item.RestartSet();
-        }
-    }
-
-    public void Disable()
-    {
-        foreach (IRestartable item in _restarters)
-        {
-            item.RestartEnd();
         }
     }
 

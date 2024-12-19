@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739683e84b365a941846b1282cc680b3, type: 3}
-  m_Name: MouseStageList
+  m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
+  m_Name: Stage 4
   m_EditorClassIdentifier: 
-  number: 0
-  stages:
-  - {fileID: 11400000, guid: fb9ba75eb12fdb142bf8152ac17d6466, type: 2}
+  stagePrefab: {fileID: 1076104324229197442, guid: 79f634d7c140acc4296f4e507b060196, type: 3}
