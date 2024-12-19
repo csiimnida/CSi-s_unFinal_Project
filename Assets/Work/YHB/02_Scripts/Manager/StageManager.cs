@@ -131,7 +131,7 @@ public class StageManager : MonoSingleton<StageManager>
         Time.timeScale = 0;
         _gameClear = true;
         OnGameClear?.Invoke();
-        BackendTest.Instance.SetTime(UIManager.Instance.time);
+        GameManager.Instance.ClearTime = UIManager.Instance.Time;
         SceneManager.LoadScene(str);
     }
 
