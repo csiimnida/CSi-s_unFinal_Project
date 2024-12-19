@@ -19,16 +19,16 @@ public class MousePlayerMove : MonoBehaviour
         _gravity = _rid.gravityScale;
         _rid.constraints = RigidbodyConstraints2D.FreezeAll;
 
-        inputReadeer.OnMouseClickEvent += OnBeginDrag;
-        inputReadeer.OnMousePosEvent += OnDrag;
-        inputReadeer.OnMouseClickCancelEvent += OnEndDrag;
+        inputReadeer.OnMouseClickEvent += HandleBeginDrag;
+        inputReadeer.OnMousePosEvent += HandleDrag;
+        inputReadeer.OnMouseClickCancelEvent += HandleEndDrag;
     }
 
     private void OnDisable()
     {
-        inputReadeer.OnMouseClickEvent -= OnBeginDrag;
-        inputReadeer.OnMousePosEvent -= OnDrag;
-        inputReadeer.OnMouseClickCancelEvent -= OnEndDrag;
+        inputReadeer.OnMouseClickEvent -= HandleBeginDrag;
+        inputReadeer.OnMousePosEvent -= HandleDrag;
+        inputReadeer.OnMouseClickCancelEvent -= HandleEndDrag;
     }
 
     public void RestartSet()
@@ -37,7 +37,7 @@ public class MousePlayerMove : MonoBehaviour
         _dragging = false;
     }
 
-    public void OnDrag(Vector2 eventData)
+    public void HandleDrag(Vector2 eventData)
     {
         if (!_dragging) return;
 
@@ -46,7 +46,7 @@ public class MousePlayerMove : MonoBehaviour
         transform.position = mousePos;
     }
 
-    public void OnBeginDrag(Vector2 eventData)
+    public void HandleBeginDrag(Vector2 eventData)
     {
         Collider2D c = Physics2D.OverlapCircle(eventData, 0.1f, layer);
         if (c is null) return;
@@ -59,7 +59,7 @@ public class MousePlayerMove : MonoBehaviour
         _rid.gravityScale = 0;
     }
 
-    public void OnEndDrag(Vector2 eventData)
+    public void HandleEndDrag(Vector2 eventData)
     {
         _dragging = false;
 
