@@ -5,17 +5,19 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))] 
-public class MoveMont : MonoBehaviour
+public class MoveMont : MonoBehaviour ,IRestartable
 {
     [field:SerializeField]public InputReader _InputReader{get; private set;}
     private Rigidbody2D _Rigidbody2D;
     private Vector2 move;
     [SerializeField] private float speed;
     [SerializeField] private float JumpPower;
+    private Vector3 startPosition;
 
     private void Awake()
     {
         _Rigidbody2D = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
     }
 
 
@@ -33,5 +35,15 @@ public class MoveMont : MonoBehaviour
     private void Update()
     {
         _Rigidbody2D.velocity = new Vector2((move.x * speed),_Rigidbody2D.velocity.y);
+    }
+
+    public void RestartSet()
+    {
+        transform.position = startPosition;
+    }
+
+    public void RestartEnd()
+    {
+        
     }
 }

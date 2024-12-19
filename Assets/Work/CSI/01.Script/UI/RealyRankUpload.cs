@@ -21,21 +21,23 @@ public class RealyRankUpload : MonoSingleton<RealyRankUpload>
     private float Nowtime;
     private bool Update;
     private bool NameChangeing;
+
+    private readonly string registerText = "등록", confirmText = "확인";
     public void SetTiem(float time)
     {
         Nowtime = time;
-        _NowTimeText.SetText(time.ToString() + "초");
-        _RankTimeText.SetText(GameManager.Instance.Time.ToString() + "초");
+        _NowTimeText.SetText($"{time}초");
+        _RankTimeText.SetText($"{GameManager.Instance.Time}초");
         if (time < GameManager.Instance.Time)
         {
             _NewPanelTrm.gameObject.SetActive(true);
-            _uploadButton.GetComponentInChildren<TextMeshProUGUI>().SetText("등록");
+            _uploadButton.GetComponentInChildren<TextMeshProUGUI>().SetText(registerText);
             Update = true;
         }
         else
         {
             Update = false;
-            _uploadButton.GetComponentInChildren<TextMeshProUGUI>().SetText("확인");
+            _uploadButton.GetComponentInChildren<TextMeshProUGUI>().SetText(confirmText);
         }
     }
 
