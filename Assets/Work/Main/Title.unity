@@ -272,6 +272,7 @@ MonoBehaviour:
   penal: {fileID: 0}
   infopenal: {fileID: 0}
   firstStart: 0
+  infotxt: {fileID: 0}
 --- !u!1 &57790131
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   penal: {fileID: 250330986}
   infopenal: {fileID: 1960252304}
-  firstStart: 0
+  firstStart: 1
+  infotxt: {fileID: 0}
 --- !u!4 &261404255
 Transform:
   m_ObjectHideFlags: 0
@@ -2077,7 +2079,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1471414112}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8414c223043aaaa4dabbfdb584c22a09, type: 3}
   m_Name: 
@@ -3116,56 +3118,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2503, y: -612.6861}
   m_SizeDelta: {x: 200, y: 250}
   m_Pivot: {x: 1, y: 0}
---- !u!1 &1410033720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1410033722}
-  - component: {fileID: 1410033721}
-  m_Layer: 0
-  m_Name: manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1410033721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410033720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8414c223043aaaa4dabbfdb584c22a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerName: 
-  UploadRank: 0
-  Wifi: 0
-  No: 0
-  Name: 
-  Time: 0
---- !u!4 &1410033722
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410033720}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3737.1187, y: 1865.8602, z: -0.62708175}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1471414112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3174,18 +3126,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
-      propertyPath: soundChannels.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
-      propertyPath: soundChannels.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1145c0f155ec39e479e941deba216078, type: 2}
-    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
-      propertyPath: soundChannels.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: b9045a99537a79547b8ffb4cb88029b8, type: 2}
     - target: {fileID: 1647744137021961367, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -4885,4 +4825,3 @@ SceneRoots:
   - {fileID: 1471414112}
   - {fileID: 261404255}
   - {fileID: 986263118}
-  - {fileID: 1410033722}

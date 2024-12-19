@@ -1,13 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public partial class GameManager : MonoSingleton<GameManager>
 {
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     [Header("서버 데이터")] 
     public string PlayerName;
     public bool UploadRank;
     public bool Wifi;
+    public float ClearTime;
     
     [Header("자신의 랭킹 정보")]
     public int No;

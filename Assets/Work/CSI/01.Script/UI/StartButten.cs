@@ -8,7 +8,6 @@ public class StartButten : MonoBehaviour
     public GameObject penal;
     public GameObject infopenal;
     public bool firstStart = false;
-    public GameObject infotxt;
     public void StartBt()
     {
         infopenal.SetActive(true);
@@ -16,7 +15,7 @@ public class StartButten : MonoBehaviour
 
     public void StartCheck()
     {
-        SceneManager.LoadScene("CSiMain");
+        SceneManager.LoadScene("InGame");
     }
 
     public void SettingBt()

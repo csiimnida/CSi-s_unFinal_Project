@@ -26,13 +26,7 @@ public class MoveMission : MonoBehaviour, IRestartable
         _screenBounds = _mainCam.WorldToScreenPoint(new Vector2(h * _mainCam.aspect - 1, h - 1));
 
         _rect = GetComponent<RectTransform>();
-        inputReader.OnMoveEvent += HandleMove;
         _startPos = _rect.anchoredPosition;
-    }
-
-    private void HandleMove(Vector2 dir)
-    {
-        
     }
 
     private void Update()
@@ -45,7 +39,6 @@ public class MoveMission : MonoBehaviour, IRestartable
         _rect.anchoredPosition = _pos;
         _pos = _rect.anchoredPosition;
 
-        Debug.Log(Vector2.Distance((Vector2)target.position, (Vector2)_mainCam.ScreenToWorldPoint(_rect.anchoredPosition)));
         if (!_isClear && Vector2.Distance((Vector2)target.position, (Vector2)_mainCam.ScreenToWorldPoint(_rect.anchoredPosition)) < 36.2f && Vector2.Distance((Vector2)target.position, (Vector2)_mainCam.ScreenToWorldPoint(_rect.anchoredPosition)) > 34.5f)
         {
             transform.GetComponentInParent<Stage>().Clear();

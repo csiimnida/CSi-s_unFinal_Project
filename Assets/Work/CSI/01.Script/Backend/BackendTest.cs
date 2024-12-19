@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class BackendTest : MonoBehaviour
 {
+    private void Start()
+    {
+        FinishGame(GameManager.Instance.ClearTime);
+    }
+
     private void FinishGame(float Finishtime)
     {
         if (GameManager.Instance.UploadRank)

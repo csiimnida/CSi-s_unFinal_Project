@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
   m_Name: Player_GoalStage11
   m_EditorClassIdentifier: 
+  mission: "\uACE8\uC5D0 \uB3C4\uCC29\uD558\uC138\uC694!"
   stagePrefab: {fileID: 1234013081318258257, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
