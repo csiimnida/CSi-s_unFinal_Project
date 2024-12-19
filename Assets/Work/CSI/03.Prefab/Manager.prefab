@@ -31,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 4887401637015741043}
   - {fileID: 8294521884093399666}
+  - {fileID: 7347412008512983826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3205736985339475966
@@ -78,6 +79,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: []
+--- !u!1 &6938324819225004784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7347412008512983826}
+  - component: {fileID: 1022592171338225749}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7347412008512983826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938324819225004784}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8849457488788932748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022592171338225749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938324819225004784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0b56825aad8e5448fb9d3cb7d026f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundChannels: []
 --- !u!1 &7187653507269293476
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerName: 
   UploadRank: 0
+  Wifi: 0
   No: 0
   Name: 
   Time: 0
