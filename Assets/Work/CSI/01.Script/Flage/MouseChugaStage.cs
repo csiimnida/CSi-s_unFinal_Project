@@ -17,9 +17,15 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
 
     IEnumerator ScreenBalckWait()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(1.5f);
         image.enabled = true;
     }
+    IEnumerator ScreenBlueWait()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        image.gameObject.SetActive(true);
+    }
+    
     private void OnDisable()
     {
         FollowMouse.Instance.CanFollow = true;
@@ -27,9 +33,13 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
         {
             image.enabled = false;
         }
+        else if(mouseStage == MouseStage.BlueScreenStage)
+        {
+            image.gameObject.SetActive(false);
+        }
 
     }
-
+//그리고 성공 후 꺼야하는데 
     public enum MouseStage
     {
         AncurMouse,
@@ -48,6 +58,11 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
             image.enabled = false;
 
             StartCoroutine(ScreenBalckWait());
+        }else if (mouseStage == MouseStage.BlueScreenStage)
+        {
+            image.gameObject.SetActive(false);
+
+            StartCoroutine(ScreenBlueWait());
         }
 
     }

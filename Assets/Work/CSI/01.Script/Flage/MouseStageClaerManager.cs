@@ -30,6 +30,10 @@ public class MouseStageClaerManager : MonoBehaviour,IRestartable
 
             _stage.Clear();
         }
+        else
+        {
+            Debug.Log(mouseStageClaerType);
+        }
     }
     private void HandleStop()
     {
@@ -44,6 +48,11 @@ public class MouseStageClaerManager : MonoBehaviour,IRestartable
 
             _stage.Restart();
         }
+        else
+        {
+            Debug.Log(mouseStageClaerType);
+
+        }
     }
 
     public void RestartSet()
@@ -51,12 +60,11 @@ public class MouseStageClaerManager : MonoBehaviour,IRestartable
         
     }
 
-    public void RestartEnd()
+    private void OnDisable()
     {
         _mouse.Move -= HandleMove;
         _mouse.Stop -= HandleStop;
     }
-
 
 
     enum MouseStageClaerType
