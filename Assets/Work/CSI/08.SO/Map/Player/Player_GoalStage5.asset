@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
-  m_Name: ClickDefor4
+  m_Name: Player_GoalStage5
   m_EditorClassIdentifier: 
-  stagePrefab: {fileID: 7952633414184370774, guid: 4f46f9a6e4665b144a781a44913c5fd2, type: 3}
+  stagePrefab: {fileID: 6227944119972513828, guid: d4c0c50115a1dde49827dcf93f47d2c8, type: 3}
