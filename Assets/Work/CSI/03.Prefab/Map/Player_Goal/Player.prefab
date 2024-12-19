@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 1713781250174579414}
   - component: {fileID: 5818824792781788972}
   - component: {fileID: 7980965133133715225}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -219,3 +219,4 @@ MonoBehaviour:
   _animator: {fileID: 2193611103716247745}
   speed: 20
   JumpPower: 30
+  banjun: 0

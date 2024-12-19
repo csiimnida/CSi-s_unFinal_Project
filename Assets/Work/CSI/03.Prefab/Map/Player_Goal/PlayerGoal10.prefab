@@ -408,6 +408,10 @@ PrefabInstance:
       value: 9.2
       objectReference: {fileID: 0}
     - target: {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: banjun
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: JumpPower
       value: 10.6
       objectReference: {fileID: 0}

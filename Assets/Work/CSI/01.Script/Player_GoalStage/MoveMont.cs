@@ -9,21 +9,23 @@ public class MoveMont : MonoBehaviour ,IRestartable
 {
     [field:SerializeField]public InputReader _InputReader{get; private set;}
     [SerializeField]private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _Rigidbody2D;
     private Vector2 move;
     [SerializeField] private float speed;
     [SerializeField] private float JumpPower;
+    [SerializeField] private bool banjun;
     private Vector3 startPosition;
 
     private void Awake()
     {
         _Rigidbody2D = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
-
+        
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         try
         {
             _animator = GetComponentInChildren<Animator>();
-
         }
         catch
         {
@@ -39,7 +41,8 @@ public class MoveMont : MonoBehaviour ,IRestartable
     }
     private void HandleMoveEvent(Vector2 obj)
     {
-        move = obj;
+        move = obj * (banjun ? -1 : 1);
+        _spriteRenderer.flipX = move.x < 0;
         if (_animator == null) return;
         if (Mathf.Abs(move.x) > 0)
         {
