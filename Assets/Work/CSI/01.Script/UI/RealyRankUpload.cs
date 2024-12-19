@@ -64,12 +64,12 @@ public class RealyRankUpload : MonoSingleton<RealyRankUpload>
         }
         
         gameObject.SetActive(false);
-        SceneManager.LoadScene("CSIStartScreen");
+        SceneManager.LoadScene("Title");
     }
     
     public void RankingUpadteBloking()
     {
-        SceneManager.LoadScene("CSIStartScreen");
+        SceneManager.LoadScene("Title");
 
     }
 
