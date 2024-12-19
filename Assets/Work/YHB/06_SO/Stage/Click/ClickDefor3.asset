@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
   m_Name: ClickDefor3
   m_EditorClassIdentifier: 
+  mission: "\uBE68\uAC04 \uC0C9\uC744 \uB204\uB974\uC138\uC694!"
   stagePrefab: {fileID: 8067709047469747028, guid: 5637e232f6075764c992980589256988, type: 3}

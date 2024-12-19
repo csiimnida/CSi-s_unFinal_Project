@@ -1,10 +1,14 @@
 using Library;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
     [SerializeField] private List<DifficultySO> difficulty = new List<DifficultySO>();
+
+    public Action OnGameClear;
+    public Action<StageSO> OnStageChange;
 
     private NotOverlapValue<StageSO> _notOverlapStage;
     private int _curDifficultyIndex = 0;
@@ -24,6 +28,7 @@ public class StageManager : MonoSingleton<StageManager>
         set => _curStageIndex = Mathf.Clamp(value, 0, difficulty[CurDifficultyIndex].stages.Count);
     }
 
+    private List<StageSO> _curStageSOList;
     private List<Stage> _curStageList;
     private bool _gameClear;
 
@@ -50,6 +55,7 @@ public class StageManager : MonoSingleton<StageManager>
         _notOverlapStage = new NotOverlapValue<StageSO>(difficulty[0].stages);
 
         _curStageList = new List<Stage>();
+        _curStageSOList = new List<StageSO>();
 
         CurStageIndex = 0;
         InstantiateStage();
@@ -60,11 +66,14 @@ public class StageManager : MonoSingleton<StageManager>
     private void InstantiateStage()
     {
         _curStageList.Clear();
+        _curStageSOList.Clear();
 
         for (int i = 0; i < _notOverlapStage.GetRangeCount(); i++)
         {
+            _curStageSOList.Add(_notOverlapStage.GetValue());
+
             _curStageList.Add(
-                new GameObjectBuilder(Instantiate(_notOverlapStage.GetValue().stagePrefab).gameObject)
+                new GameObjectBuilder(Instantiate(_curStageSOList[_curStageSOList.Count - 1].stagePrefab).gameObject)
                 .SetParent(transform)
                 .SetPosition(transform.position)
                 .SetActive(false)
@@ -75,6 +84,7 @@ public class StageManager : MonoSingleton<StageManager>
 
         _curStageList[0].gameObject.SetActive(true);
         _curStageList[0].Restart();
+        OnStageChange?.Invoke(_curStageSOList[0]);
     }
 
     public void StageClear()
@@ -91,6 +101,7 @@ public class StageManager : MonoSingleton<StageManager>
 
         _curStageList[CurStageIndex].gameObject.SetActive(true);
         _curStageList[CurStageIndex].Restart();
+        OnStageChange?.Invoke(_curStageSOList[CurStageIndex]);
     }
 
     public void NextDifficulty()
@@ -106,6 +117,7 @@ public class StageManager : MonoSingleton<StageManager>
         CurStageIndex = 0;
         _curStageList[0].gameObject.SetActive(true);
         _curStageList[CurStageIndex].Restart();
+        OnStageChange?.Invoke(_curStageSOList[CurStageIndex]);
     }
 
     public void GameClear()

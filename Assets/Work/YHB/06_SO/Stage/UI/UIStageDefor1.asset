@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
-  m_Name: ClickDef
+  m_Name: UIStageDefor1
   m_EditorClassIdentifier: 
-  mission: "\uBE68\uAC04 \uC0C9\uC744 \uB204\uB974\uC138\uC694!"
-  stagePrefab: {fileID: 6343383373301385292, guid: b972185f7f50c3d41bfbc679b655b8ee, type: 3}
+  mission: "\uB098\uAC00\uC138\uC694!"
+  stagePrefab: {fileID: 7290808851495534526, guid: e4fde391685e49a4cb7218da108bf778, type: 3}
