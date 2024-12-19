@@ -368,7 +368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.1}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485, y: 0}
+  m_AnchoredPosition: {x: -493, y: -16}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &225641318396936775
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   target: {fileID: 6059903562974597738}
-  speed: 10
+  speed: 30
   distance: 1
 --- !u!1001 &2612768509569576392
 PrefabInstance:

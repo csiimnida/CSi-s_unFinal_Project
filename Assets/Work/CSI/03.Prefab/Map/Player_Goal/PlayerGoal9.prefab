@@ -551,6 +551,18 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7183699354870739415, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6436058
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183699354870739415, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6436058
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183699354870739415, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6436058
+      objectReference: {fileID: 0}
     - target: {fileID: 9089597179743361524, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: m_Name
       value: Player
