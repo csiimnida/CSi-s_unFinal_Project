@@ -14,7 +14,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
     private Rigidbody2D _Rigidbody2D;
     private Vector2 move;
     private float speed = 10;
-    private float JumpPower = 16;
+    private float JumpPower = 18;
     [SerializeField] private bool banjun;
     private Vector3 startPosition;
     [SerializeField]private LayerMask whatIsGround;
