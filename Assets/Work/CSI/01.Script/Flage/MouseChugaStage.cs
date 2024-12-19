@@ -64,6 +64,5 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
 
             StartCoroutine(ScreenBlueWait());
         }
-
     }
 }
