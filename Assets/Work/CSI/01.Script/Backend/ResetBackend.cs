@@ -23,7 +23,7 @@ public class ResetBackend : MonoBehaviour
         if (bro.IsSuccess())
         {
             GameManager.Instance.Wifi = true;
-            SetRanksUI.Instance.SetWifi(false);
+            //SetRanksUI.Instance.SetWifi(false);
             Debug.Log("초기화 성공 : " + bro); // 성공일 경우 statusCode 204 Success\
             Login.Instance.CustomLogin();
             return true;
