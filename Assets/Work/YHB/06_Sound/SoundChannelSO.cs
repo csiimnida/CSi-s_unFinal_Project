@@ -7,7 +7,6 @@ public enum SoundType
 {
     BGM,
     SFX,
-    GameOver
 }
 
 [CreateAssetMenu(menuName = "SO/Sound/SoundChannelSO")]

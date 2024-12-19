@@ -3126,6 +3126,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: soundChannels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: soundChannels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1145c0f155ec39e479e941deba216078, type: 2}
+    - target: {fileID: 1022592171338225749, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: soundChannels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9045a99537a79547b8ffb4cb88029b8, type: 2}
     - target: {fileID: 1647744137021961367, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
       propertyPath: m_Name
       value: Manager
