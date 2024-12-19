@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
   m_Name: Stage 2
   m_EditorClassIdentifier: 
+  mission: "\uB9C8\uC6B0\uC2A4\uB97C \uC6C0\uC9C1\uC774\uC9C0 \uB9C8\uC138\uC694!"
   stagePrefab: {fileID: 3321934587658720026, guid: 47b46be7a00a92c43be10c6562042915, type: 3}

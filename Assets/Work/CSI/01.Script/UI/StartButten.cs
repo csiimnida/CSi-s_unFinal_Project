@@ -15,7 +15,7 @@ public class StartButten : MonoBehaviour
 
     public void StartCheck()
     {
-        SceneManager.LoadScene("CSiMain");
+        SceneManager.LoadScene("InGame");
     }
 
     public void SettingBt()
