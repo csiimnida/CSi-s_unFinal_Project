@@ -663,6 +663,10 @@ PrefabInstance:
       value: DieCollider
       objectReference: {fileID: 0}
     - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1050005
       objectReference: {fileID: 0}
@@ -867,7 +871,9 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
-  GroundCheck: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &7914937267735484289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893481389851203752, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
