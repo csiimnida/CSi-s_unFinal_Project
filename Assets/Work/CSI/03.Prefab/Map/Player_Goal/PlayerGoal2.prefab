@@ -197,6 +197,10 @@ PrefabInstance:
       value: DieCollider
       objectReference: {fileID: 0}
     - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1050005
       objectReference: {fileID: 0}

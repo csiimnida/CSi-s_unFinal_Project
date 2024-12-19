@@ -149,7 +149,9 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
-  GroundCheck: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &2553606945343159677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,6 +646,10 @@ PrefabInstance:
     - target: {fileID: 3915414595679323331, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
       propertyPath: m_Name
       value: DieCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8889
       objectReference: {fileID: 0}
     - target: {fileID: 4753714749863346034, guid: 807af668a26d1e945b2945b65fdd0893, type: 3}
       propertyPath: m_LocalPosition.x
