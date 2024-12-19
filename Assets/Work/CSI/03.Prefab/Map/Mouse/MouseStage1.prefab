@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 5546756885616408689}
-  fadeTime: 0.5
+  fadeTime: 1
 --- !u!1001 &6709986083991581104
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739683e84b365a941846b1282cc680b3, type: 3}
   m_Name: MouseStageList
   m_EditorClassIdentifier: 
-  number: 0
+  number: 1
   stages:
   - {fileID: 11400000, guid: fb9ba75eb12fdb142bf8152ac17d6466, type: 2}
+  - {fileID: 11400000, guid: 9562f5454ed5ef041ae64c459f2af774, type: 2}

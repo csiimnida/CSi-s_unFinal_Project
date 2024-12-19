@@ -99,6 +99,10 @@ public class BackenRank : MonoSingleton<BackenRank>
         if (!data.IsSuccess())
         {
             Debug.LogError("자신의 랭킹 불러오기 시패 : " + data);
+            if (data.ErrorCode == "NotFoundException")
+            {
+                GameManager.Instance.SetRank("0","정보 없음","0");
+            }
             return;
         }
         foreach (LitJson.JsonData jsonData in data.FlattenRows())
