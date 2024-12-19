@@ -777,9 +777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274a9a59ba62ff6469fbaa1c3e6fc04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penal: {fileID: 0}
-  infopenal: {fileID: 0}
-  firstStart: 0
+  penal: {fileID: 250330986}
+  infopenal: {fileID: 1960252304}
+  firstStart: 1
   infotxt: {fileID: 0}
 --- !u!4 &261404255
 Transform:
