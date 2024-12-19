@@ -14,6 +14,7 @@ public class DieCheck : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if (!collision.gameObject.CompareTag("Player")) return;
+        if (collision.gameObject.CompareTag("Thorm")) return;
 
         stage.Restart();
     }

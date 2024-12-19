@@ -1,8 +1,23 @@
 using System;
 using UnityEngine;
 
-public class BackendTest : MonoBehaviour
+public class BackendTest : MonoSingleton<BackendTest>
 {
+    private float _time;
+    private bool _gameEnd = false;
+
+    private void Awake()
+    {
+        if (_gameEnd) FinishGame(_time);
+        else _gameEnd = false;
+    }
+
+    public void SetTime(float time)
+    {
+        _time = time;
+        _gameEnd = true;
+    }
+
     private void FinishGame(float Finishtime)
     {
         if (GameManager.Instance.UploadRank)
@@ -12,5 +27,4 @@ public class BackendTest : MonoBehaviour
             RealyRankUpload.Instance.SetTiem(Finishtime);
         }
     }
-
 }
