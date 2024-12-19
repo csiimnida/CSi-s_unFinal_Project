@@ -5,9 +5,15 @@ using UnityEngine;
 
 public partial class GameManager : MonoSingleton<GameManager>
 {
+    
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        if(GameManager.Instance == this)
+            DontDestroyOnLoad(gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     [Header("서버 데이터")] 
@@ -23,7 +29,7 @@ public partial class GameManager : MonoSingleton<GameManager>
 
     public void SetUploadRank(bool value)
     {
-        UploadRank = value;
+        UploadRank = true;
     }
 
     public void SetRank(string rank , string name, string time)
