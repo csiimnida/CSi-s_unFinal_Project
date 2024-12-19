@@ -27,12 +27,12 @@ public class ClickStage : MonoBehaviour
                     new Vector2(-moveZone.x, -moveZone.y),
                     new Vector2(moveZone.x, -moveZone.y),
 
-                    new Vector2(moveZone.x, -moveZone.y - 1),
-                    new Vector2(-moveZone.x - 1, -moveZone.y - 1),
-                    new Vector2(-moveZone.x - 1, moveZone.y + 1),
-                    new Vector2(moveZone.x + 1, moveZone.y + 1),
-                    new Vector2(moveZone.x + 1, -moveZone.y - 1),
-                    new Vector2(moveZone.x, -moveZone.y - 1)
+                    new Vector2(moveZone.x, -moveZone.y - 3),
+                    new Vector2(-moveZone.x - 3, -moveZone.y - 3),
+                    new Vector2(-moveZone.x - 3, moveZone.y + 3),
+                    new Vector2(moveZone.x + 3, moveZone.y + 3),
+                    new Vector2(moveZone.x + 3, -moveZone.y - 3),
+                    new Vector2(moveZone.x, -moveZone.y - 3)
             };
         })
         .Build();
