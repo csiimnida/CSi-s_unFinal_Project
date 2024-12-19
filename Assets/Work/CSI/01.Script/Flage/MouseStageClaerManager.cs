@@ -48,8 +48,7 @@ public class MouseStageClaerManager : MonoBehaviour,IRestartable
 
     public void RestartSet()
     {
-        _mouse.Move += HandleMove;
-        _mouse.Stop += HandleStop;
+
     }
 
     public void RestartEnd()
