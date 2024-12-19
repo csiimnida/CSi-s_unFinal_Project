@@ -52,7 +52,7 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
         StopCoroutine(ScreenBalckWait());
         if (mouseStage == MouseStage.AncurMouse)
         {
-            FollowMouse.Instance.CanFollow = false;
+            //FollowMouse.Instance.CanFollow = false;
         }else if (mouseStage == MouseStage.ScreenBlack)
         {
             image.enabled = false;
