@@ -22,6 +22,8 @@ public class ResetBackend : MonoBehaviour
         // 뒤끝 초기화에 대한 응답값
         if (bro.IsSuccess())
         {
+            GameManager.Instance.Wifi = true;
+            SetRanksUI.Instance.SetWifi(false);
             Debug.Log("초기화 성공 : " + bro); // 성공일 경우 statusCode 204 Success\
             Login.Instance.CustomLogin();
             return true;
@@ -35,6 +37,8 @@ public class ResetBackend : MonoBehaviour
             if (bro.StatusCode == 0)
             {
                 Debug.LogError("인터냇을 확인 해주세요! \n Cannot connect to destination host");
+                SetRanksUI.Instance.SetWifi(true);
+                GameManager.Instance.Wifi = false;
             }
             Debug.LogError("초기화 실패 : " + bro); // 실패일 경우 statusCode 400대 에러 발생
             return false;
