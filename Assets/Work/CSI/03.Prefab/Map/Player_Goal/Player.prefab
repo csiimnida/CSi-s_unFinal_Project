@@ -95,7 +95,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae6504da773bcc741bbd9fb0ec41e052, type: 3}
+  m_Sprite: {fileID: 2093292714, guid: c475ba67cfc9e71409e7a7e7f3e37369, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,8 +173,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02847308, y: 0.012942433}
-  m_Size: {x: 1.1264082, y: 1.8438392}
+  m_Offset: {x: -0.015733242, y: 0.8351879}
+  m_Size: {x: 1.1723833, y: 1.7059145}
   m_Direction: 0
 --- !u!50 &5818824792781788972
 Rigidbody2D:
@@ -188,7 +188,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.26
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 12
@@ -216,5 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
+  _animator: {fileID: 2193611103716247745}
   speed: 20
   JumpPower: 30

@@ -16,3 +16,12 @@ MonoBehaviour:
   stages:
   - {fileID: 11400000, guid: 2fa8f2f4f46f57b4bbc1021581df5294, type: 2}
   - {fileID: 11400000, guid: 3adf9ffbd9e6a224c9fea982aba33509, type: 2}
+  - {fileID: 11400000, guid: 670dacbabf834b64b8a85144724aa572, type: 2}
+  - {fileID: 11400000, guid: 8cb6d62ad8c28dd4193df2db68341e35, type: 2}
+  - {fileID: 11400000, guid: 26b14b58f1fae684a9826649e78d807f, type: 2}
+  - {fileID: 11400000, guid: 3e6393478b7839141a12eefe58a93e3b, type: 2}
+  - {fileID: 11400000, guid: 5e2dfdc71408e8d46be62945e191eddb, type: 2}
+  - {fileID: 11400000, guid: c1220327e75013e45884b7e75939ba22, type: 2}
+  - {fileID: 11400000, guid: 7aa2d2d6e6912da469fce3fdfcc5d0d0, type: 2}
+  - {fileID: 11400000, guid: 6973f12367901e342b34d5dcd4b6b004, type: 2}
+  - {fileID: 11400000, guid: 451334652cad08c4f9920367e6ac84f9, type: 2}

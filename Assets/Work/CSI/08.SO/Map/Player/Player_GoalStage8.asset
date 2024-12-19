@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a89656bcf5c77048ac794b08c7ea062, type: 3}
   m_Name: Player_GoalStage8
   m_EditorClassIdentifier: 
-  stagePrefab: {fileID: 3894839872926243772, guid: 61bcd6dd12c1989488b6284611318b8a, type: 3}
+  stagePrefab: {fileID: 6717465081776856534, guid: d503b6af8f7c3d54aacb99b8fd31a0f1, type: 3}
