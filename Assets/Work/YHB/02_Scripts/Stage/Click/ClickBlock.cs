@@ -1,12 +1,12 @@
 using Library;
 using System;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 using Random = UnityEngine.Random;
 
 public class ClickBlock : MonoBehaviour, IRestartable
 {
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private Vector2 blinkzone;
     [SerializeField] private float distance, blinkDistance;
     [SerializeField] private int maxMoveStack;
     [SerializeField] private bool canMoving, canBlink, canChange, isClearBtn;
@@ -20,6 +20,8 @@ public class ClickBlock : MonoBehaviour, IRestartable
 
     public void RestartSet()
     {
+        Camera.main.transform.position = new Vector3(0, 0, -10);
+        Camera.main.orthographicSize = 5;
         transform.position = _startPos;
         _rid.velocity = Vector3.zero;
         _moveStack = 0;
@@ -50,8 +52,6 @@ public class ClickBlock : MonoBehaviour, IRestartable
 
         _rid = transform.TryAddComponent<Rigidbody2D>();
         _rid.gravityScale = 0;
-
-        Debug.Log("set");
     }
 
     private void HandleDVDMove()
@@ -72,12 +72,18 @@ public class ClickBlock : MonoBehaviour, IRestartable
     private void HandleBlink()
     {
         int x;
+        Vector2 pos;
         do
         {
-            x = Random.Range(-1, 2);
-        } while (x == 0);
+            do
+            {
+                x = Random.Range(-1, 2);
+            } while (x == 0);
 
-        transform.position += new Vector3(x * blinkDistance, Random.Range(-1, 2) * blinkDistance);
+            pos = transform.position + new Vector3(x * blinkDistance, Random.Range(-1, 2) * blinkDistance);
+        } while (pos.x >= blinkzone.x / 2 || pos.y >= blinkzone.y / 2);
+
+        transform.position = pos;
     }
 
     private void HandleChange()
@@ -111,6 +117,8 @@ public class ClickBlock : MonoBehaviour, IRestartable
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, distance);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(Vector2.zero, blinkzone);
     }
 
     private void OnValidate()
