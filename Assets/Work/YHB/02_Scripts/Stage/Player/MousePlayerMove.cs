@@ -17,6 +17,7 @@ public class MousePlayerMove : MonoBehaviour
         _startPos = transform.position;
         _rid = transform.TryAddComponent<Rigidbody2D>();
         _gravity = _rid.gravityScale;
+        _rid.constraints = RigidbodyConstraints2D.FreezeAll;
 
         inputReadeer.OnMouseClickEvent += OnBeginDrag;
         inputReadeer.OnMousePosEvent += OnDrag;
