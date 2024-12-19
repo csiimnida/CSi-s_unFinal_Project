@@ -17,8 +17,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
     private float JumpPower = 16;
     [SerializeField] private bool banjun;
     private Vector3 startPosition;
-    [SerializeField] private Transform GroundCheck;
-    private Vector2 GroundSize = new Vector2(0.5f,0.2f);
+    [SerializeField]private LayerMask whatIsGround;
 
     private void Awake()
     {
@@ -68,8 +67,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
 
     private bool CheckGround()
     {
-        
-        foreach (var VARIABLE in Physics2D.BoxCastAll(new Vector2(transform.position.x,transform.position.y), GroundSize,0,Vector2.zero))
+        foreach (var VARIABLE in Physics2D.OverlapCircleAll(transform.position, 2))
         {
             Debug.Log(VARIABLE.transform.gameObject.name);
             Debug.Log(VARIABLE.transform.tag);
