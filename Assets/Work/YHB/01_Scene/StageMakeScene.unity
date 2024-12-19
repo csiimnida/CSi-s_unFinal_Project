@@ -679,7 +679,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   bulletSprite: {fileID: 1418259140, guid: 1814ad6d59a322740b375992eaea621d, type: 3}
-  power: 5
+  bulletLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  power: 7
   bulletColliderSize: 1
 --- !u!212 &888129816
 SpriteRenderer:

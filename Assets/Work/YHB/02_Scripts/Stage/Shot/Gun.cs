@@ -5,6 +5,7 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Sprite bulletSprite;
+    [SerializeField] private LayerMask bulletLayer;
     [SerializeField] private float power, bulletColliderSize;
 
     private Bullet _bullet;
@@ -24,6 +25,7 @@ public class Gun : MonoBehaviour
     private void Shoot(Vector2 pos)
     {
         _bullet ??= new GameObjectBuilder()
+            .SetLayer(bulletLayer)
             .SetComponent<SpriteRenderer>(s => s.sprite = bulletSprite)
             .SetComponent<CircleCollider2D>(c =>
             {
