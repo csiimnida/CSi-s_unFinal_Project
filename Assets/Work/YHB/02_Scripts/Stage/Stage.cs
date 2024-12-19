@@ -19,7 +19,7 @@ public class Stage : MonoBehaviour
         Camera.main.transform.position = new Vector3(0, 0, -10);
         Camera.main.orthographicSize = cameraSize;
 
-        Cursor.visible = cursor;
+        Cursor.visible = true;
 
         OnClearEvent += StageManager.Instance.StageClear;
         OnGameEndEvent += Restart;
