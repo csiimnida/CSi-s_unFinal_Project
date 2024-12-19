@@ -8,7 +8,7 @@ public class SetRanksUI : MonoSingleton<SetRanksUI>
     [SerializeField] private Transform Prefab;
     [SerializeField] private Transform Panal;
     [SerializeField] private PanalData MyRank;
-    private bool first = true;
+    [SerializeField] private bool first = true;
     [SerializeField] private Transform Wifi;
 
     public void SetWifi(bool value = true)
