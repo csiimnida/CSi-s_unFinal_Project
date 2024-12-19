@@ -12,10 +12,10 @@ public partial class GameManager : MonoSingleton<GameManager>
     public int No;
     public string Name;
     public float Time;
-    
-    public void SuccessGame()
+
+    public void SetUploadRank(bool value)
     {
-        Debug.Log("SuccessGame");
+        UploadRank = value;
     }
 
     public void SetRank(string rank , string name, string time)
