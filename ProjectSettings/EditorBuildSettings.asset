@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Work/Main/Title.unity
+    guid: 9904f7e744fe699409ee89ab287f4cd1
+  - enabled: 1
     path: Assets/Work/Main/InGame.unity
     guid: 4ef2ff6266daa4447855b4a693ff06f7
   - enabled: 1
     path: Assets/Work/Main/Rasult.unity
     guid: 615670ad52800a64c88f4aa550724142
-  - enabled: 1
-    path: Assets/Work/Main/Title.unity
-    guid: 9904f7e744fe699409ee89ab287f4cd1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3c2cc70dd7f14ed488b6cabaf7ed27ff, type: 3}
