@@ -192,6 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 8209099942516641746}
   fadeTime: 1
+  cameraSize: 5
+  cursor: 1
 --- !u!114 &8187566938819735771
 MonoBehaviour:
   m_ObjectHideFlags: 0
