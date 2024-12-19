@@ -26,17 +26,20 @@ public class ClickBlock : MonoBehaviour, IRestartable
         _rid.velocity = Vector3.zero;
         _moveStack = 0;
 
+        Debug.Log("ss");
+    }
+
+    public void OnEnable()
+    {
         inputReader.OnMousePosEvent += HandleCheckMouse;
         inputReader.OnMouseClickEvent += HandleClick;
 
         if (canMoving) _starMove += HandleDVDMove;
         if (canBlink) _starMove += HandleBlink;
         if (canChange) _starMove += HandleChange;
-
-        Debug.Log("ss");
     }
 
-    public void RestartEnd()
+    public void OnDisable()
     {
         inputReader.OnMousePosEvent -= HandleCheckMouse;
         inputReader.OnMouseClickEvent -= HandleClick;

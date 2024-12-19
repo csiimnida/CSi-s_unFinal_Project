@@ -5,5 +5,4 @@ using UnityEngine;
 public interface IRestartable
 {
     public void RestartSet();
-    public void RestartEnd();
 }

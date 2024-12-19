@@ -81,7 +81,6 @@ public class StageManager : MonoSingleton<StageManager>
     {
         if (_gameClear) return;
 
-        _curStageList[CurStageIndex].Disable();
         _curStageList[CurStageIndex++].gameObject.SetActive(false);
 
         if (CurStageIndex >= difficulty[CurDifficultyIndex].stages.Count)
@@ -116,7 +115,7 @@ public class StageManager : MonoSingleton<StageManager>
         _curStageList[_curStageList.Count - 1].gameObject.SetActive(true);
         Time.timeScale = 0;
         _gameClear = true;
-        Debug.Log("Clear");
+        Debug.Log("GameClear");
     }
 
     #endregion
