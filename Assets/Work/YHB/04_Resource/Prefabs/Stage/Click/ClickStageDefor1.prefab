@@ -258,7 +258,7 @@ MonoBehaviour:
   inputReader: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   blinkzone: {x: 16, y: 9}
   distance: 1
-  blinkDistance: 0
+  blinkDistance: 1.5
   maxMoveStack: 3
   canMoving: 0
   canBlink: 1

@@ -38,10 +38,19 @@ public class Stage : MonoBehaviour
 
     public void Restart()
     {
-        //Cursor.WarpCursorPosition();
 
         fadeImage.transform.parent.gameObject.SetActive(true);
-        fadeImage.DOFade(1f, 0).OnComplete(() => fadeImage.DOFade(0f, fadeTime).OnComplete(() => fadeImage.transform.parent.gameObject.SetActive(false)));
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        fadeImage.DOFade(1f, 0).SetDelay(Mathf.Epsilon).OnComplete(() =>
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            fadeImage.DOFade(0f, fadeTime).OnComplete(() =>
+            {
+                fadeImage.transform.parent.gameObject.SetActive(false);
+            });
+        });
         foreach (IRestartable item in _restarters)
         {
             item.RestartSet();
