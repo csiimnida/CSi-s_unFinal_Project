@@ -146,7 +146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2391594260422796471
 Transform:
   m_ObjectHideFlags: 0
@@ -411,31 +411,8 @@ PrefabInstance:
     - {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9089597179743361524, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8360791315130905925}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
---- !u!1 &1377844393726559750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9089597179743361524, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
-  m_PrefabInstance: {fileID: 7871072055308525554}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8360791315130905925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377844393726559750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 736509ffd44a38a4f857a51a8018c50f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
-  speed: 0
-  JumpPower: 0
 --- !u!4 &8610131651496757082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893481389851203752, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
