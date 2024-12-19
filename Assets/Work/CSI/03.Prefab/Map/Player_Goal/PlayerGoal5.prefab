@@ -149,6 +149,7 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
+  GroundCheck: {fileID: 0}
 --- !u!1001 &2553606945343159677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 4426258071981871046, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
       propertyPath: m_Name
       value: box
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426258071981871046, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -601,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 4426258071981871046, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
       propertyPath: m_Name
       value: box (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426258071981871046, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6244346944561599514, guid: 79be8266044d7334b9df76a2402955aa, type: 3}
       propertyPath: m_Size.x

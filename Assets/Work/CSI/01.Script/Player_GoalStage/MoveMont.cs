@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 
@@ -67,9 +68,13 @@ public class MoveMont : MonoBehaviour ,IRestartable
 
     private bool CheckGround()
     {
-        foreach (var VARIABLE in Physics.OverlapBox(GroundCheck.position,GroundSize/2))
+        
+        foreach (var VARIABLE in Physics2D.BoxCastAll(new Vector2(transform.position.x,transform.position.y), GroundSize,0,Vector2.zero))
         {
-            if (VARIABLE.CompareTag("Ground"))
+            Debug.Log(VARIABLE.transform.gameObject.name);
+            Debug.Log(VARIABLE.transform.tag);
+
+            if (VARIABLE.transform.CompareTag("Ground"))
             {
                 return true;
             }
@@ -95,6 +100,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(GroundCheck.position,GroundSize);
+        Gizmos.DrawRay(transform.position, Vector2.down * 1);
     }
+
 }

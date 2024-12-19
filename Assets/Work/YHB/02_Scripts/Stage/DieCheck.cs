@@ -5,12 +5,19 @@ using UnityEngine;
 public class DieCheck : MonoBehaviour
 {
     [SerializeField] private Stage stage;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void Awake()
     {
-        if (!collision.CompareTag("Player")) return;
+        stage = GetComponentInParent<Stage>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Player")) return;
 
         stage.Restart();
     }
+
 
 
 }

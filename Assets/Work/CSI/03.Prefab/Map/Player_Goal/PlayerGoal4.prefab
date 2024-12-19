@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 5568057313392926694}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,6 +299,7 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
+  GroundCheck: {fileID: 0}
 --- !u!1001 &1108655469080895013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -663,6 +664,7 @@ MonoBehaviour:
   <_InputReader>k__BackingField: {fileID: 11400000, guid: 0c9d58a3b39a67f499c0336493682c94, type: 2}
   _animator: {fileID: 0}
   banjun: 0
+  GroundCheck: {fileID: 0}
 --- !u!61 &4733323996348730700
 BoxCollider2D:
   m_ObjectHideFlags: 0
