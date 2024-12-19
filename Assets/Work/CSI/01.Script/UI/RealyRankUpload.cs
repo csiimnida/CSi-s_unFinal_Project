@@ -67,6 +67,11 @@ public class RealyRankUpload : MonoSingleton<RealyRankUpload>
         SceneManager.LoadScene("CSIStartScreen");
     }
     
+    public void RankingUpadteBloking()
+    {
+        SceneManager.LoadScene("CSIStartScreen");
+
+    }
 
     private string name_Save;
     private void HandleNameChange()
