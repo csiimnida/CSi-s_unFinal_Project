@@ -3026,7 +3026,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3205736985339475966, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+    - {fileID: 6938324819225004784, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
@@ -3038,6 +3040,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 943090114326153690, guid: 080f8e5c6ce428e43b361dd864c59ae8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5487906058750879680, guid: 080f8e5c6ce428e43b361dd864c59ae8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
