@@ -409,13 +409,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1380027668356378616, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094832193752407757, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197851078452635193, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201735112811387294, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2858009097171047900, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
       propertyPath: m_Name
       value: PlayerGoal11
       objectReference: {fileID: 0}
-    - target: {fileID: 2858009097171047900, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2965630941557310194, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839201401294010694, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716243537080513123, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724368186437943364, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920030410412049983, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466930726517853437, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6282375605843564473, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,6 +492,22 @@ PrefabInstance:
     - target: {fileID: 6282375605843564473, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293744003588343600, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545165998405460182, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700432756799118471, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671652510454935198, guid: c85932a675bbacf44b1030ea12cb4542, type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -474,10 +526,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGoal8
       objectReference: {fileID: 0}
-    - target: {fileID: 1380946197412491487, guid: d503b6af8f7c3d54aacb99b8fd31a0f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7095438236537403883, guid: d503b6af8f7c3d54aacb99b8fd31a0f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -518,8 +566,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2350299448504737243, guid: d503b6af8f7c3d54aacb99b8fd31a0f1, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -576,10 +623,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGoal4
       objectReference: {fileID: 0}
-    - target: {fileID: 2914986875896552882, guid: 2a71607028913e444a0bb5bc1cb101b0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -596,10 +639,6 @@ PrefabInstance:
     - target: {fileID: 1839631690909479225, guid: b494db954e8f21d4791f067f02cee0eb, type: 3}
       propertyPath: m_Name
       value: PlayerGoal1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1839631690909479225, guid: b494db954e8f21d4791f067f02cee0eb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6893158614135968240, guid: b494db954e8f21d4791f067f02cee0eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -711,21 +750,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2161954602003621913, guid: f8ec45baad6660d44bfd7a6a408f74ad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3381706162923203973, guid: f8ec45baad6660d44bfd7a6a408f74ad, type: 3}
       propertyPath: m_Name
       value: PlayerGoal6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3381706162923203973, guid: f8ec45baad6660d44bfd7a6a408f74ad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7283385744471218741, guid: f8ec45baad6660d44bfd7a6a408f74ad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7443164695874910866, guid: f8ec45baad6660d44bfd7a6a408f74ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -841,10 +868,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGoal10
       objectReference: {fileID: 0}
-    - target: {fileID: 2112560475418785732, guid: bc4433c45a266d04a97c3dc42a792b66, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6069664636269804039, guid: bc4433c45a266d04a97c3dc42a792b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -901,10 +924,6 @@ PrefabInstance:
     - target: {fileID: 2503297783019138837, guid: f927d52cee6f98a47b0636d17f235a20, type: 3}
       propertyPath: m_Name
       value: PlayerGoal7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2503297783019138837, guid: f927d52cee6f98a47b0636d17f235a20, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4480259721641841337, guid: f927d52cee6f98a47b0636d17f235a20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1019,10 +1038,6 @@ PrefabInstance:
     - target: {fileID: 3986432191401299649, guid: d4c0c50115a1dde49827dcf93f47d2c8, type: 3}
       propertyPath: m_Name
       value: PlayerGoal5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986432191401299649, guid: d4c0c50115a1dde49827dcf93f47d2c8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4208055439258648400, guid: d4c0c50115a1dde49827dcf93f47d2c8, type: 3}
       propertyPath: m_LocalPosition.x

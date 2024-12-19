@@ -5,7 +5,7 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Sprite bulletSprite;
-    [SerializeField] private float minAngle, maxAngle, power, bulletColliderSize;
+    [SerializeField] private float power, bulletColliderSize;
 
     private Bullet _bullet;
 
@@ -45,8 +45,6 @@ public class Gun : MonoBehaviour
         Vector2 direction = vector - (Vector2)transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if (angle < minAngle || angle > maxAngle) return;
-
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Clamp(angle, minAngle, maxAngle));
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

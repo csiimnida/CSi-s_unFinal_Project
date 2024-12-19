@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 428088582484580908}
   fadeTime: 0.5
+  cameraSize: 9
+  cursor: 0
 --- !u!1 &6408877699808501313
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,9 +405,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5818824792781788972, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818824792781788972, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: speed
-      value: 9.2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: banjun
@@ -413,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7980965133133715225, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: JumpPower
-      value: 10.6
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9089597179743361524, guid: 9604e80c0ad061d44aa626c80f03c9f0, type: 3}
       propertyPath: m_Name
