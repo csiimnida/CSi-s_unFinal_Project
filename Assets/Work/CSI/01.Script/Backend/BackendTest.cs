@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackendTest : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class BackendTest : MonoBehaviour
             BackenRank.Instance.GetMyRanking();
             RealyRankUpload.Instance.gameObject.SetActive(true);
             RealyRankUpload.Instance.SetTiem(Finishtime);
+        }
+        else
+        {
+            SceneManager.LoadScene("Title");
         }
     }
 
