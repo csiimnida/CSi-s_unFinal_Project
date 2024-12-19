@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 
@@ -16,8 +17,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
     private float JumpPower = 16;
     [SerializeField] private bool banjun;
     private Vector3 startPosition;
-    [SerializeField] private Transform GroundCheck;
-    private Vector2 GroundSize = new Vector2(0.5f,0.2f);
+    [SerializeField]private LayerMask whatIsGround;
 
     private void Awake()
     {
@@ -67,9 +67,12 @@ public class MoveMont : MonoBehaviour ,IRestartable
 
     private bool CheckGround()
     {
-        foreach (var VARIABLE in Physics.OverlapBox(GroundCheck.position,GroundSize/2))
+        foreach (var VARIABLE in Physics2D.OverlapCircleAll(transform.position, 2))
         {
-            if (VARIABLE.CompareTag("Ground"))
+            Debug.Log(VARIABLE.transform.gameObject.name);
+            Debug.Log(VARIABLE.transform.tag);
+
+            if (VARIABLE.transform.CompareTag("Ground"))
             {
                 return true;
             }
@@ -95,6 +98,7 @@ public class MoveMont : MonoBehaviour ,IRestartable
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(GroundCheck.position,GroundSize);
+        Gizmos.DrawRay(transform.position, Vector2.down * 1);
     }
+
 }
