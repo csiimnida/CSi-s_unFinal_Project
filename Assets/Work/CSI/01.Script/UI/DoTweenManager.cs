@@ -12,7 +12,7 @@ public class DoTweenManager : MonoBehaviour
     private void Start()
     {
         
-            title.transform.GetComponent<RectTransform>().DOAnchorPosX(855, 0.4f).SetEase(Ease.Unset);
+            title.transform.GetComponent<RectTransform>().DOAnchorPosX(822, 0.4f).SetEase(Ease.Unset);
         btns.transform.GetComponent<RectTransform>().DOAnchorPosX(1342, 0.4f).SetEase(Ease.Unset);
         
     }

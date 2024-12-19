@@ -9,7 +9,12 @@ public class SetRanksUI : MonoSingleton<SetRanksUI>
     [SerializeField] private Transform Panal;
     [SerializeField] private PanalData MyRank;
     private bool first = true;
+    [SerializeField] private Transform Wifi;
 
+    public void SetWifi(bool value = true)
+    {
+        Wifi.gameObject.SetActive(value);
+    }
     private void Start()
     {
         if(first == true)

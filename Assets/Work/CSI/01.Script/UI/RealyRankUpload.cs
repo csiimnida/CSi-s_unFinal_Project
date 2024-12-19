@@ -5,6 +5,7 @@ using System.Data;
 using BackEnd;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -63,6 +64,7 @@ public class RealyRankUpload : MonoSingleton<RealyRankUpload>
         }
         
         gameObject.SetActive(false);
+        SceneManager.LoadScene("CSIStartScreen");
     }
     
 

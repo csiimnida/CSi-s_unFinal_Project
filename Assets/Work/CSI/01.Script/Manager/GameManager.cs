@@ -7,6 +7,7 @@ public partial class GameManager : MonoSingleton<GameManager>
     [Header("서버 데이터")] 
     public string PlayerName;
     public bool UploadRank;
+    public bool Wifi;
     
     [Header("자신의 랭킹 정보")]
     public int No;
