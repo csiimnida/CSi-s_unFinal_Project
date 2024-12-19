@@ -16,6 +16,8 @@ public class MoveMont : MonoBehaviour ,IRestartable
     private float JumpPower = 16;
     [SerializeField] private bool banjun;
     private Vector3 startPosition;
+    [SerializeField] private Transform GroundCheck;
+    private Vector2 GroundSize = new Vector2(0.5f,0.2f);
 
     private void Awake()
     {
@@ -57,9 +59,24 @@ public class MoveMont : MonoBehaviour ,IRestartable
     }
     private void Jump()
     {
-        _Rigidbody2D.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+        if (CheckGround())
+        {
+            _Rigidbody2D.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+        }
     }
 
+    private bool CheckGround()
+    {
+        foreach (var VARIABLE in Physics.OverlapBox(GroundCheck.position,GroundSize/2))
+        {
+            if (VARIABLE.CompareTag("Ground"))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     private void Update()
     {
         _Rigidbody2D.velocity = new Vector2((move.x * speed),_Rigidbody2D.velocity.y);
@@ -74,5 +91,10 @@ public class MoveMont : MonoBehaviour ,IRestartable
     public void RestartEnd()
     {
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(GroundCheck.position,GroundSize);
     }
 }
