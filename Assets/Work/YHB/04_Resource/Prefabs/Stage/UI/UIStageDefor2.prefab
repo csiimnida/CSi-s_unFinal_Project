@@ -183,6 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 3378080847735541688}
   fadeTime: 1
+  cameraSize: 5
+  cursor: 1
 --- !u!114 &2115550148564922426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 5288556603659401184}
-  distance: 100
+  distance: 125
 --- !u!1 &5957732728018884133
 GameObject:
   m_ObjectHideFlags: 0

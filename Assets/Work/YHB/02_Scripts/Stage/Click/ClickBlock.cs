@@ -20,8 +20,6 @@ public class ClickBlock : MonoBehaviour, IRestartable
 
     public void RestartSet()
     {
-        Camera.main.transform.position = new Vector3(0, 0, -10);
-        Camera.main.orthographicSize = 5;
         transform.position = _startPos;
         _rid.velocity = Vector3.zero;
         _moveStack = 0;
