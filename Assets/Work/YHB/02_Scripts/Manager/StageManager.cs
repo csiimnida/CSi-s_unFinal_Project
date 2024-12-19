@@ -128,6 +128,7 @@ public class StageManager : MonoSingleton<StageManager>
         _curStageList[_curStageList.Count - 1].gameObject.SetActive(true);
         Time.timeScale = 0;
         _gameClear = true;
+        OnGameClear?.Invoke(); 
         Debug.Log("GameClear");
     }
 
