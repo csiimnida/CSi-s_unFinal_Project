@@ -131,7 +131,7 @@ public class StageManager : MonoSingleton<StageManager>
         Time.timeScale = 0;
         _gameClear = true;
         OnGameClear?.Invoke();
-        GameManager.Instance.ClearTime = UIManager.Instance.Time;
+        GameManager.Instance.ClearTime = UIManager.Instance.time;
         SceneManager.LoadScene(str);
     }
 

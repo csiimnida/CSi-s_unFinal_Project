@@ -8,7 +8,7 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField] private TextMeshProUGUI mission;
     [SerializeField] private RectTransform backBtn;
 
-    public float Time {  get; private set; }
+    public float time {  get; private set; }
     private bool _isGameClear;
 
     private void Awake()
@@ -34,7 +34,7 @@ public class UIManager : MonoSingleton<UIManager>
     {
         if (_isGameClear) return;
 
-        ChangeTimer(Time += UnityEngine.Time.deltaTime);
+        ChangeTimer(time += Time.deltaTime);
     }
 
     private void ChangeTimer(float time)

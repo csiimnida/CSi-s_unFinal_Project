@@ -59,6 +59,4 @@ public class Stage : MonoBehaviour
             item.RestartSet();
         }
     }
-
-
 }

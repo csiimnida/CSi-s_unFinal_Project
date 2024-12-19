@@ -3179,6 +3179,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1647744137021961367, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205736985339475966, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938324819225004784, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7187653507269293476, guid: fa6c7e5eeae72f743a07086280e36963, type: 3}
       propertyPath: m_IsActive
       value: 0
