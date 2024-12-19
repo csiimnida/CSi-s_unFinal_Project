@@ -25,10 +25,10 @@ public class MoveUI : MonoBehaviour, IRestartable, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvas.transform as RectTransform, // 부모 Canvas의 RectTransform
-            eventData.position,               // 마우스 위치 (Screen Point)
-            canvas.worldCamera,               // 카메라 (Screen Space - Camera 모드일 경우 필요)
-            out Vector2 localPoint            // 변환된 로컬 위치
+            canvas.transform as RectTransform,
+            eventData.position,
+            canvas.worldCamera,
+            out Vector2 localPoint
         );
 
         localPoint += new Vector2(-50, 50);
