@@ -2,10 +2,12 @@ using Library;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoSingleton<StageManager>
 {
     [SerializeField] private List<DifficultySO> difficulty = new List<DifficultySO>();
+    [SerializeField] private string str;
 
     public Action OnGameClear;
     public Action<StageSO> OnStageChange;
@@ -128,8 +130,8 @@ public class StageManager : MonoSingleton<StageManager>
         _curStageList[_curStageList.Count - 1].gameObject.SetActive(true);
         Time.timeScale = 0;
         _gameClear = true;
-        OnGameClear?.Invoke(); 
-        Debug.Log("GameClear");
+        OnGameClear?.Invoke();
+        SceneManager.LoadScene(str);
     }
 
     #endregion

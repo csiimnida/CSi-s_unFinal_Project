@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   stages:
-  - {fileID: 11400000, guid: 1cdebcb83a2e47346a6012e25a2c82ad, type: 2}
-  - {fileID: 11400000, guid: 924384d91ffa4ed4198212093920be77, type: 2}
-  - {fileID: 11400000, guid: fb2fec30e088f9b4cbeb8d5e3f537170, type: 2}
   - {fileID: 11400000, guid: a184db7119a24ab43a5d62ed5a66acb1, type: 2}
+  - {fileID: 11400000, guid: 2fa8f2f4f46f57b4bbc1021581df5294, type: 2}
+  - {fileID: 11400000, guid: 54311f34e2d0610479fe853d681d42fd, type: 2}
+  - {fileID: 11400000, guid: 8df1502ecd970c248930c2c336d25b4b, type: 2}
