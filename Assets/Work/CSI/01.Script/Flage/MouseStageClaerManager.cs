@@ -48,7 +48,7 @@ public class MouseStageClaerManager : MonoBehaviour,IRestartable
 
     public void RestartSet()
     {
-
+        
     }
 
     public void RestartEnd()

@@ -64,6 +64,7 @@ public class RealyRankUpload : MonoSingleton<RealyRankUpload>
         
         gameObject.SetActive(false);
     }
+    
 
     private string name_Save;
     private void HandleNameChange()

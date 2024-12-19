@@ -22,10 +22,6 @@ public class Mouse : MonoBehaviour,IRestartable
         _InputReader.OnMouseMoveEvent += HandleMouseMove;
     }
 
-    private void OnEnable()
-    {
-        RestartSet();
-    }
 
     private void Update()
     {
@@ -36,7 +32,7 @@ public class Mouse : MonoBehaviour,IRestartable
             {
                 StartTimer = false;
                 timer = 0;
-                if (Mousepos.x < Mathf.Epsilon && Mousepos.y < Mathf.Epsilon)
+                if (Mathf.Abs(Mousepos.x) < Mathf.Epsilon && Mathf.Abs(Mousepos.y) < Mathf.Epsilon)
                 {
                     Stop?.Invoke();
                     Debug.Log("Stop");
