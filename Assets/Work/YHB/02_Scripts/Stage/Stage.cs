@@ -44,7 +44,6 @@ public class Stage : MonoBehaviour
         fadeImage.gameObject.SetActive(false);
         foreach (IRestartable item in _restarters)
         {
-            item.RestartEnd();
             item.RestartSet();
         }
     }
