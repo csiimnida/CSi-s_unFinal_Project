@@ -272,7 +272,7 @@ MonoBehaviour:
   penal: {fileID: 0}
   infopenal: {fileID: 0}
   firstStart: 0
-  infotxt: {fileID: 422111742}
+  infotxt: {fileID: 0}
 --- !u!1 &57790131
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,10 +777,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274a9a59ba62ff6469fbaa1c3e6fc04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penal: {fileID: 250330986}
-  infopenal: {fileID: 1960252304}
+  penal: {fileID: 0}
+  infopenal: {fileID: 0}
   firstStart: 0
-  infotxt: {fileID: 422111742}
+  infotxt: {fileID: 0}
 --- !u!4 &261404255
 Transform:
   m_ObjectHideFlags: 0
