@@ -20,7 +20,8 @@ public partial class GameManager : MonoSingleton<GameManager>
 
     public void SetRank(string rank , string name, string time)
     {
-        No = int.Parse(rank);
+        int no = int.Parse(rank);
+        No = no;
         Name = name;
         Time = float.Parse(time);
     }

@@ -55,9 +55,4 @@ public class MouseChugaStage : MonoBehaviour ,IRestartable
             StartCoroutine(ScreenBalckWait());
         }
     }
-
-    public void RestartEnd()
-    {
-        
-    }
 }
